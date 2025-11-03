@@ -22,4 +22,19 @@ public class Entrada {
         return valor;
     }
 
+    static double real() {
+        double valor = Double.parseDouble(inicializar());
+        return valor;
+    }
+
+    static String cadena() {
+        String valor = inicializar();
+        return valor;
+    }
+
+    static char caracter() {
+        String valor = inicializar();
+        return valor.charAt(0);
+    }
+
 }
