@@ -1,3 +1,7 @@
+package variables_y_condicionales1;
+
+import util.Entrada;
+
 public class Main {
     public static void main(String[] args) {
         System.out.println("Boletin 1 - Variables y condicionales \n");
@@ -18,13 +22,13 @@ public class Main {
 
         // Entrada de datos (a, b, c)
         System.out.println("Type the value for the coeficient (a):");
-        a = Entrada.entero();
+        a = Entrada.real();
 
         System.out.println("\n Type the value for the coeficient (b):");
-        b = Entrada.entero();
+        b = Entrada.real();
 
         System.out.println("\n Type the value for the coeficient (c):");
-        c = Entrada.entero();
+        c = Entrada.real();
 
         // Confirmación de los datos introducidos
         System.out.println("\n Os coeficientes son: a=" + a + ", b=" + b + ", c=" + c + "\n");
