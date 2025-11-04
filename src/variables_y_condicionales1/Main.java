@@ -6,6 +6,8 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("Boletin 1 - Variables y condicionales \n");
 
+        System.out.println("Ejercício 1 - Pedir los coeficientes de una ecuación de 2º grado, y muestre sus soluciones reales. Si no existen, debe indicarlo. \n");
+
         // Declaración de variables
 
         // coeficientes de la ecuación cuadrática - ax^2 + bx + c = 0
