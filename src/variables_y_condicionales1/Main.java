@@ -10,30 +10,30 @@ public class Main {
 
         // Declaración de variables
 
-        // coeficientes de la ecuación cuadrática - ax^2 + bx + c = 0
+        // Coeficientes de la ecuación cuadrática - ax^2 + bx + c = 0
         double a, b, c;
 
-        // variables para el cálculo de las raíces
+        // Variables para el cálculo de las raíces
         double discriminante, raiz1, raiz2;
 
-        // Declaración de modelo de función
-        System.out.println("Formula 1: ax^2 + bx + c = 0 \n");
-        System.out.println("Formula 2: delta = b^2 - (4 * a * c) \n");
-        System.out.println("Formula 3: Raiz 1 = -b + sqrt(delta) \n");
-        System.out.println("Formula 4: Raiz 2 = -b - sqrt(delta) \n");
+        // Formula(s)
+        System.out.println("Formula 1: (a)(x)^2 + (b)x + c = 0 \n");
+        System.out.println("Formula 2: D(elta) = (b)^2 - (4 * a * c) \n");
+        System.out.println("Formula 3: Raiz 1 = -(b) + sqrt(delta) \n");
+        System.out.println("Formula 4: Raiz 2 = -(b) - sqrt(delta) \n");
 
         // Entrada de datos (a, b, c)
         System.out.println("Type the value for the coeficient (a):");
         a = Entrada.real();
 
-        System.out.println("\n Type the value for the coeficient (b):");
+        System.out.println("\nType the value for the coeficient (b):");
         b = Entrada.real();
 
-        System.out.println("\n Type the value for the coeficient (c):");
+        System.out.println("\nType the value for the coeficient (c):");
         c = Entrada.real();
 
         // Confirmación de los datos introducidos
-        System.out.println("\n Os coeficientes son: a=" + a + ", b=" + b + ", c=" + c + "\n");
+        System.out.println("\nOs coeficientes son: a=" + a + ", b=" + b + ", c=" + c + "\n");
 
         // Mostrar la ecuación cuadrática
         System.out.println("Su ecuación cuadrática es: " + a + "x^2 + " + b + "x + " + c + " = 0 \n");
@@ -42,7 +42,7 @@ public class Main {
         discriminante = (b * b) - (4 * a * c);
 
         // Mostrar el cálculo del discriminante
-        System.out.println("El cálculo es: " + b + "^2" + " - 4 * " + a + " * " + c + "\n");
+        System.out.println("El cálculo es: D(iscriminante) = " + b + "^2" + " - 4 * " + a + " * " + c + "\n");
 
         // Mostrar el valor del discriminante
         System.out.println("Discriminante: " + discriminante + "\n");
@@ -51,9 +51,7 @@ public class Main {
         if (discriminante  < 0) {
             System.out.println("La ecuación no tiene soluciones reales.\n");
         } else if (discriminante == 0) {
-            System.out.println("La ecuación tiene una solución real.\n");
-        } else if ( discriminante > 0) {
-            System.out.println("La ecuación tiene dos soluciones reales.\n");
+            System.out.println("La ecuación tiene una solución real (y repetida).\n");
 
             raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
             raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
@@ -62,7 +60,18 @@ public class Main {
 
             System.out.println("Las soluciones son: \n");
             System.out.println("Raíz 1: " + raiz1 + "\n");
-            System.out.println("Raíz 2: " + raiz2 + "\n");
+            System.out.println("Raíz 2: " + raiz2);
+        } else if ( discriminante > 0) {
+            System.out.println("La ecuación tiene dos soluciones reales (distintas).\n");
+
+            raiz1 = (-b + Math.sqrt(discriminante)) / (2 * a);
+            raiz2 = (-b - Math.sqrt(discriminante)) / (2 * a);
+
+            System.out.println("------------------------------\n");
+
+            System.out.println("Las soluciones son: \n");
+            System.out.println("Raíz 1: " + raiz1 + "\n");
+            System.out.println("Raíz 2: " + raiz2);
         };
     }
 
