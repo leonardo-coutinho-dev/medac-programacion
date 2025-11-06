@@ -20,23 +20,47 @@ public class Entrada {
     }
 
     public static int entero() {
-        int valor = Integer.parseInt(inicializar());
-        return valor;
+        while (true) {
+            try {
+                int valor = Integer.parseInt(inicializar());
+                return valor;
+            } catch (NumberFormatException e) {
+                System.out.println("\nERROR: You must enter an integer. Try again: \n");
+            }
+        }
     }
 
     public static double real() {
-        double valor = Double.parseDouble(inicializar());
-        return valor;
+        while (true) {
+            try {
+                double valor = Double.parseDouble(inicializar());
+                return valor;
+            } catch (NumberFormatException e) {
+                System.out.println("\nERROR: You must enter a real number. Try again: \n");
+            }
+        }
     }
 
     public static String cadena() {
-        String valor = inicializar();
-        return valor;
+        while (true) {
+            try {
+                String valor = inicializar();
+                return valor;
+            } catch (NumberFormatException e) {
+                System.out.println("\nERROR: You must enter a String. Try again: \n");
+            }
+        }
     }
 
     public static char caracter() {
-        String valor = inicializar();
-        return valor.charAt(0);
+        while (true) {
+            try {
+                String valor = inicializar();
+                return valor.charAt(0);
+            } catch (NumberFormatException e) {
+                System.out.println("\nERROR: You must enter a String. Try again: \n");
+            }
+        }
     }
 
 }
