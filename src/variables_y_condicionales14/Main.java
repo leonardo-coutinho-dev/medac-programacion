@@ -13,6 +13,7 @@ public class Main {
         int nota;
 
         System.out.println("Type a grade between 0 and 10: \n");
+        
         nota = Entrada.entero();
 
         while (nota < 0 | nota > 10) {
