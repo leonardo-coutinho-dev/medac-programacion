@@ -12,6 +12,11 @@ import util.ConsoleColors;
  * If the user types 100, the inverse number will be 1.
  * If the user types 1000, the inverse number will be 1.
  * This issue can be solved by treating the number as a string, but for now, we will keep it as an integer to keep the code simple.
+ * 
+ * Another solution could be to use arrays to store each digit, and then reverse the array to get the inverse number.
+ * This would also solve the issue with leading zeros.
+ * 
+ * -------> And, a even simpler solution would be to just compare the digits directly without forming the inverse number (check folder 13_1)
  */
 
 public class Main {
