@@ -21,7 +21,7 @@ public class Main {
 
         if (numero < 0 | numero > 9999) {
             while (numero < 0 | numero > 9999) {
-                System.out.println("\nPlease, type a number between 0 and 9.999: \n");
+                System.out.println("\nNot allowed: Please, type a number between 0 and 9.999: \n");
                 numero = Entrada.entero();
             };
         };
@@ -38,9 +38,9 @@ public class Main {
                 System.out.println(unidades + " " + decenas + " " + centenas + " " + miles);
 
                 if (unidades == miles & decenas == centenas) {
-                    System.out.println(ConsoleColors.success("\nThe number " + numero + " is a palindrome. " + numero + " = " + unidades + decenas + centenas + miles + "\n"));
+                    System.out.println(ConsoleColors.success("\n The number " + numero + " is a palindrome. " + numero + " = " + unidades + decenas + centenas + miles + " \n"));
                 } else {
-                    System.out.println(ConsoleColors.error("\nThe number " + numero + " is not a palindrome. " + numero + " != " + unidades + decenas + centenas + miles + "\n"));
+                    System.out.println(ConsoleColors.error("\n The number " + numero + " is not a palindrome. " + numero + " != " + unidades + decenas + centenas + miles + " \n"));
                 };
             };
 
@@ -52,9 +52,9 @@ public class Main {
                 System.out.println(unidades + " " + decenas + " " + centenas);
 
                 if (unidades == centenas) {
-                    System.out.println(ConsoleColors.success("\nThe number " + numero + " is a palindrome. " + numero + " = " + unidades + decenas + centenas + "\n"));
+                    System.out.println(ConsoleColors.success("\n The number " + numero + " is a palindrome. " + numero + " = " + unidades + decenas + centenas + " \n"));
                 } else {
-                    System.out.println(ConsoleColors.error("\nThe number " + numero + " is not a palindrome. " + numero + " != " + unidades + decenas + centenas + "\n"));
+                    System.out.println(ConsoleColors.error("\n The number " + numero + " is not a palindrome. " + numero + " != " + unidades + decenas + centenas + " \n"));
                 };
             };
 
@@ -65,9 +65,9 @@ public class Main {
                 System.out.println(unidades + " " + decenas);
 
                 if (unidades == decenas) {
-                    System.out.println(ConsoleColors.success("\nThe number " + numero + " is a palindrome. " + numero + " = " + unidades + decenas + "\n"));
+                    System.out.println(ConsoleColors.success("\n The number " + numero + " is a palindrome. " + numero + " = " + unidades + decenas + " \n"));
                 } else {
-                    System.out.println(ConsoleColors.error("\nThe number " + numero + " is not a palindrome. " + numero + " != " + unidades + decenas + "\n"));
+                    System.out.println(ConsoleColors.error("\n The number " + numero + " is not a palindrome. " + numero + " != " + unidades + decenas + " \n"));
                 };
             };
 
