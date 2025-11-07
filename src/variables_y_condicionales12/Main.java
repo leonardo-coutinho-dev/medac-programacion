@@ -11,6 +11,7 @@ public class Main {
         int numero, unidades, decenas, centenas, miles;
 
         System.out.println("Type a number between 0 and 9.999: \n");
+
         numero = Entrada.entero();
 
         System.out.println("\nYou have typed: " + numero);
@@ -30,7 +31,7 @@ public class Main {
                 centenas = ((numero % 1000) - (numero % 100)) / 100;
                 miles = ((numero - (numero % 1000)) / 1000);
 
-                System.out.println(unidades + " " + decenas + " " + centenas + " " + miles);
+                System.out.println(unidades + " " + decenas + " " + centenas + " " + miles + "\n");
             }
 
             if (numero > 99 & numero < 1000) {
