@@ -21,23 +21,23 @@ public class Main {
         while (nota < 0 | nota > 10) {
             System.out.println("\n Not allowed: Please, type a grade between 0 and 10: \n");
             nota = Entrada.entero();
-        }
+        };
 
         if (nota >= 0 & nota < 5) {
             System.out.println(ConsoleColors.error("\n INSUFICIENTE \n"));
-        }
+        };
         if (nota == 5) {
             System.out.println(ConsoleColors.success("\n SUFICIENTE \n"));
-        }
+        };
         if (nota == 6 | nota == 7) {
             System.out.println(ConsoleColors.success("\n BIEN \n"));
-        }
+        };
         if (nota == 8 | nota == 9) {
             System.out.println(ConsoleColors.success("\n NOTABLE \n"));
-        }
+        };
         if (nota == 10) {
             System.out.println(ConsoleColors.success("\n SOBRESALIENTE \n"));
-        }
+        };
 
         // OR
 
@@ -59,6 +59,6 @@ public class Main {
             case 10:
                 System.out.println(ConsoleColors.success("\n SOBRESALIENTE \n"));
                 break;  
-        }
+        };
     };
 };
