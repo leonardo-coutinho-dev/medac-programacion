@@ -17,13 +17,13 @@ public class Main {
         int dia, mes, ano;
         String error = "e"; // y = year (año); m = month (mes); d = day (dia)
 
-        System.out.println("Type a day (1 to 30): \n");
+        System.out.println("Type a day: \n");
         dia = Entrada.entero();
 
-        System.out.println("\nType a month (1 to 12): \n");
+        System.out.println("\nType a month: \n");
         mes = Entrada.entero();
 
-        System.out.println("\nType a year (> 0): \n");
+        System.out.println("\nType a year: \n");
         ano = Entrada.entero();
 
         System.out.println("\nLa fecha es la seguinte: " + dia + "/" + mes + "/" + ano + "\n");
