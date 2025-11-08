@@ -53,7 +53,7 @@ public class Main {
                 System.out.println(ConsoleColors.error("INVALID VALUE - DIA: " + dia + "\n"));
                 break;
             case "em":
-                System.out.println(ConsoleColors.error("INVALID VALUE - MES - (condition: 1 to 12): " + mes + "\n"));
+                System.out.println(ConsoleColors.error("INVALID VALUE - MES: " + mes + "\n"));
                 break;
             case "ey":
                 System.out.println(ConsoleColors.error("INVALID VALUE - ANO: " + ano + "\n"));
