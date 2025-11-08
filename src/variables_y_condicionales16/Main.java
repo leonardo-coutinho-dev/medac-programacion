@@ -5,8 +5,6 @@ import util.Entrada;
 
 public class Main {
     public static void main (String[] args) {
-        System.out.println(ConsoleColors.success("Hello world!"));
-
         System.out.println("\nBoletin 1 - Variables y condicionales \n");
 
         System.out.println("Ejercício 16 - Pedir el dia, mes y año de una fecha e indicar si la fecha es correcta. Con meses de 28, 30 y 31 dias. \n");
@@ -69,8 +67,6 @@ public class Main {
         } else {
             System.out.println(ConsoleColors.error("La fecha es incorrecta! \n"));
         };
-
-        // handling errors becomes chaotic
 
         // include d28, d30 or d31 to identify which month and provide a hint to the user
     };
