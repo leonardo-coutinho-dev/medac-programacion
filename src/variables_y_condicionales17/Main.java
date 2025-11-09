@@ -8,8 +8,9 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("\nBoletin 1 - Variables y condicionales \n");
 
-        System.out.println("Ejercício 17 - Pedir el dia, mes y año de una fecha correcta y mostrar la fecha del dia siguiente. suponer que todos los meses tienen 30 dias. \n");
-        
+        System.out.println(
+                "Ejercício 17 - Pedir el dia, mes y año de una fecha correcta y mostrar la fecha del dia siguiente. suponer que todos los meses tienen 30 dias. \n");
+
         int dia, mes, ano;
 
         String error = "e"; // d m y
@@ -27,11 +28,14 @@ public class Main {
 
         System.out.println(dia + "/" + mes + "/" + ano + "\n");
 
-        if (dia < 1 | dia > 30) error += "d";
+        if (dia < 1 | dia > 30)
+            error += "d";
 
-        if (mes < 1 | mes > 12) error += "m";
+        if (mes < 1 | mes > 12)
+            error += "m";
 
-        if (ano < 1) error += "y";
+        if (ano < 1)
+            error += "y";
 
         if (error.contains("d") | error.contains("m") | error.contains("y")) {
             System.out.println(ConsoleColors.error("Wrong value(s), please, try again!\n"));
@@ -47,13 +51,15 @@ public class Main {
                 ano += 1;
             } else if (dia < 30) {
                 dia += 1;
-            };
+            }
+            ;
 
             System.out.println("The next day is: \n");
 
             System.out.println(dia + "/" + mes + "/" + ano);
 
-            if (dia == 1 & mes == 1) System.out.println("\nHappy new year!\n");
+            if (dia == 1 & mes == 1)
+                System.out.println("\nHappy new year!\n");
         }
     };
 };
