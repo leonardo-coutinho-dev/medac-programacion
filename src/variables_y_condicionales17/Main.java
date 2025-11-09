@@ -8,7 +8,7 @@ public class Main {
     public static void main(String[] args) {
         System.out.println("\nBoletin 1 - Variables y condicionales \n");
 
-        System.out.println("Ejercício 17 - Pedir el dia, mes y año de una fecha correcta  y mostrar la fecha del dia siguiente. suponer que todos los meses tienen 30 dias. \n");
+        System.out.println("Ejercício 17 - Pedir el dia, mes y año de una fecha correcta y mostrar la fecha del dia siguiente. suponer que todos los meses tienen 30 dias. \n");
         
         int dia, mes, ano;
 

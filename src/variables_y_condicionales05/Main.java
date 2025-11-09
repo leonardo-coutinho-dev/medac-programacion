@@ -1,4 +1,4 @@
-package variables_y_condicionales5;
+package variables_y_condicionales05;
 
 import util.Entrada;
 
