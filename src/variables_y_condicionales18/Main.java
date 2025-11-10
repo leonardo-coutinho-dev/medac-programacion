@@ -29,6 +29,8 @@ public class Main {
 
         int dia, mes, ano;
 
+        int new_dia, new_mes, new_ano;
+
         int[] result;
 
         String error = "e";
@@ -44,7 +46,7 @@ public class Main {
 
         System.out.println("\nLa fecha es la siguiente: \n");
 
-        System.out.println(ConsoleColors.success(dia + "/" + mes + "/" + ano + "\n"));
+        System.out.println(dia + "/" + mes + "/" + ano + "\n");
 
         switch (mes) {
             case 1, 3, 5, 7, 8, 10, 12:
@@ -84,12 +86,16 @@ public class Main {
                     break;
             }
 
+            new_dia = result[0];
+            new_mes = result[1];
+            new_ano = result[2];
+
             System.out.println("The next day is: \n");
 
-            System.out.println(result[0] + "/" + result[1] + "/" + result[2]);
+            System.out.println(ConsoleColors.success(new_dia + "/" + new_mes + "/" + new_ano + "\n"));
 
-            if (dia == 1 & mes == 1)
-                System.out.println("\nHappy new year!\n");
+            if (new_dia == 1 & new_mes == 1)
+                System.out.println("Happy new year!\n");
 
         } else {
             System.out.println(ConsoleColors.error("La fecha no es válida! \n"));
