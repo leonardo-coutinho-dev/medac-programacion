@@ -75,7 +75,7 @@ public class Main {
 
                 if (ano_1 - ano_2 == 0) {
 
-                    if (mes_1 - mes_2 == 0 & dia_1 - dia_2 != 0) {
+                    if (dia_1 - dia_2 != 0 & mes_1 - mes_2 == 0) {
                         System.out.println("Ano y mes igual!\n");
                         sum_dias += (dia_1 - dia_2);
                         System.out.println(
@@ -113,13 +113,33 @@ public class Main {
 
                     }
                 } else if (ano_1 - ano_2 == 1) {
+
                     if (dia_1 - dia_2 == 0 & mes_1 - mes_2 == 0) {
-                    }
-                    if (dia_1 - dia_2 == 0 & mes_1 - mes_2 != 0) {
-                    }
-                    if (dia_1 - dia_2 != 0 & mes_1 - mes_2 == 0) {
-                    }
-                    if (dia_1 - dia_2 != 0 & mes_1 - mes_2 != 0) {
+                        sum_dias += year_amount;
+                        System.out.println(
+                                ConsoleColors.success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
+                    } else {
+                        if (mes_1 == 1 & mes_2 == 12) {
+                            sum_dias += ((meses[mes_2 - 1] - dia_2) + dia_1);
+
+                            System.out.println(ConsoleColors
+                                    .success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
+                        } else {
+                            sum_dias += (meses[mes_2 - 1] - dia_2) + dia_1;
+
+                            for (int i = mes_2; i < meses.length; i++) {
+                                sum_dias += meses[i];
+                            }
+
+                            for (int i = 0; i < mes_1 - 1; i++) {
+                                sum_dias += meses[i];
+                            }
+
+                            System.out.println(ConsoleColors
+                                    .success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
+
+                        }
+
                     }
 
                 } else if (ano_1 - ano_2 > 1) {
@@ -137,19 +157,13 @@ public class Main {
                                     + "\n");
 
                     if (dia_1 - dia_2 == 0 & mes_1 - mes_2 == 0) {
-                    }
-                    if (dia_1 - dia_2 == 0 & mes_1 - mes_2 != 0) {
-                    }
-                    if (dia_1 - dia_2 != 0 & mes_1 - mes_2 == 0) {
-                    }
-                    if (dia_1 - dia_2 != 0 & mes_1 - mes_2 != 0) {
+                    } else {
                     }
 
                     System.out.println(
                             ConsoleColors.success("How many days should I sum? " + (((ano_1 - ano_2) - 1) * 365))
                                     + "\n");
 
-                    // POR FAZER
                 }
 
             } else if (fecha_distante == 2) {
