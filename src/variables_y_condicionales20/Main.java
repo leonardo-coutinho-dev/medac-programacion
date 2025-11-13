@@ -11,7 +11,9 @@ public class Main {
         System.out.println(
                 "\nEjercicio 20 - Pedir una hora de la forma hora, minutos y segundos, y mostrar la hora el segundo seguiente.\n");
 
-        int hour = 0, minutes = 0, seconds = 0;
+        int hour = 0, minute = 0, second = 0;
+
+        int[] newTime = new int[3];
 
         boolean isValid;
 
@@ -19,74 +21,52 @@ public class Main {
         hour = Entrada.entero();
 
         System.out.println("\nType the minutes: \n");
-        minutes = Entrada.entero();
+        minute = Entrada.entero();
 
         System.out.println("\nType the seconds: \n");
-        seconds = Entrada.entero();
+        second = Entrada.entero();
 
         System.out
-                .println("\nThis is the time you typed: " + hour + " : " + minutes + " : " + seconds);
+                .println("\nThis is the time you typed: " + hour + " : " + minute + " : " + second);
 
         System.out.println("-----------");
 
-        isValid = validateTime(hour, minutes, seconds);
+        isValid = validateTime(hour, minute, second);
 
         if (isValid) {
 
-            // logic goes here:
+            newTime = calculateTime(hour, minute, second);
 
-            if (seconds < 59) {
-                seconds++;
-            } else {
-                seconds = 0;
-                if (minutes < 59) {
-                    minutes++;
-                } else {
-                    minutes = 0;
-                    if (hour < 23) {
-                        hour++;
-                    } else {
-                        hour = 0;
-                    }
-                }
-            }
             System.out.println(ConsoleColors.success("The next second is: "));
             System.out.println("-----------");
-            System.out.printf("%02d:%02d:%02d%n", hour, minutes, seconds);
+            System.out.printf("%02d:%02d:%02d%n", newTime[0], newTime[1], newTime[2]);
 
         } else {
             System.out.println(ConsoleColors.error("Invalid time values!"));
         }
 
-        // CLOCK LOGIC:
+        System.out.println(ConsoleColors.success("----------"));
 
-        // while (true) {
-        // try {
-        // Thread.sleep(1000);
-        // } catch (InterruptedException e) {
-        // e.printStackTrace();
-        // }
+        System.out.println(ConsoleColors.success("Let's start the clock!"));
 
-        // if (seconds < 59) {
-        // seconds++;
-        // } else {
-        // seconds = 0;
+        System.out.println(ConsoleColors.success("----------"));
 
-        // if (minutes < 59) {
-        // minutes++;
-        // } else {
-        // minutes = 0;
+        for (int i = 0; i < 60; i++) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
 
-        // if (hour < 23) {
-        // hour++;
-        // } else {
-        // hour = 0;
-        // }
-        // }
-        // }
+            newTime = calculateTime(hour, minute, second);
 
-        // System.out.printf("%02d:%02d:%02d%n", hour, minutes, seconds);
-        // }
+            hour = newTime[0];
+            minute = newTime[1];
+            second = newTime[2];
+
+            System.out.printf("%02d:%02d:%02d%n", newTime[0], newTime[1], newTime[2]);
+
+        }
 
     };
 
@@ -107,4 +87,31 @@ public class Main {
 
         return isValid;
     };
+
+    public static int[] calculateTime(int hour, int minute, int second) {
+
+        int[] time = new int[3];
+
+        if (second < 59) {
+            second++;
+        } else {
+            second = 0;
+            if (minute < 59) {
+                minute++;
+            } else {
+                minute = 0;
+                if (hour < 23) {
+                    hour++;
+                } else {
+                    hour = 0;
+                }
+            }
+        }
+
+        time[0] = hour;
+        time[1] = minute;
+        time[2] = second;
+
+        return time;
+    }
 }
