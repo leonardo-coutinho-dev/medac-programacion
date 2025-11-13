@@ -11,24 +11,9 @@ public class Main {
 
         int dia_1, mes_1, ano_1, dia_2, mes_2, ano_2;
 
-        String error = "e";
-
         int fecha_distante;
 
-        String validateDate_1, validateDate_2;
-
-        int[] meses = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }; // starts at position 0 1 2 3 4 5 6 7 8 9 11
-
-        int year_amount = 0;
-        int sum_dias = 0;
-
-        for (int i = 0; i < meses.length; i++) {
-            year_amount += meses[i];
-        }
-        ;
-
-        System.out
-                .println(ConsoleColors.success("This is the amount of days one year contains: " + year_amount + "\n"));
+        boolean validateDate_1, validateDate_2;
 
         System.out.println("Type the day of the first date: \n");
         dia_1 = Entrada.entero();
@@ -41,9 +26,9 @@ public class Main {
 
         System.out.println("\nThis is the first date: \n");
 
-        System.out.println(ConsoleColors.success(dia_1 + "/" + mes_1 + "/" + ano_1 + "\n"));
+        System.out.println(ConsoleColors.success(dia_1 + "/" + mes_1 + "/" + ano_1));
 
-        System.out.println("Type the day of the second date: \n");
+        System.out.println("\nType the day of the second date: \n");
         dia_2 = Entrada.entero();
 
         System.out.println("\nType the month of the second date: \n");
@@ -54,166 +39,96 @@ public class Main {
 
         System.out.println("\nThis is the second date: \n");
 
-        System.out.println(ConsoleColors.success(dia_2 + "/" + mes_2 + "/" + ano_2 + "\n"));
+        System.out.println(ConsoleColors.success(dia_2 + "/" + mes_2 + "/" + ano_2));
 
-        validateDate_1 = validateDate(dia_1, mes_1, ano_1, error); // MODULAR_FUNCTION_1
+        validateDate_1 = validateDate(dia_1, mes_1, ano_1); // MODULAR_FUNCTION_1
 
-        validateDate_2 = validateDate(dia_2, mes_2, ano_2, error); // MODULAR_FUNCTION_1
+        validateDate_2 = validateDate(dia_2, mes_2, ano_2); // MODULAR_FUNCTION_1
 
-        System.out.println("This is the result of processing the data: \n");
+        System.out.println("-----------");
 
-        System.out.println("1. " + validateDate_1 + "\n");
-        System.out.println("2. " + validateDate_2 + "\n");
+        if (validateDate_1 && validateDate_2) {
+            System.out.println(ConsoleColors.success("Correct values!"));
 
-        if (validateDate_1 == "e" & validateDate_2 == "e") {
-            System.out.println(ConsoleColors.success("Correct values! \n"));
+            System.out.println("-----------");
 
             fecha_distante = whichIsMoreDistant(dia_1, mes_1, ano_1, dia_2, mes_2, ano_2); // MODULAR_FUNCTION_2
 
             if (fecha_distante == 1) {
-                System.out.println(ConsoleColors.success("La fecha 1 es la mas distante! \n"));
 
-                if (ano_1 - ano_2 == 0) {
+                System.out.println(ConsoleColors.success("La fecha 1 es la mas distante!"));
 
-                    if (dia_1 - dia_2 != 0 & mes_1 - mes_2 == 0) {
-                        System.out.println("Ano y mes igual!\n");
-                        sum_dias += (dia_1 - dia_2);
-                        System.out.println(
-                                ConsoleColors.success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
-                    }
+                System.out.println("-----------");
 
-                    if (dia_1 - dia_2 == 0 & mes_1 - mes_2 != 0) {
-                        System.out.println("Ano y dia igual!\n");
+                int result_distance = calculateDateDistance(dia_1, mes_1, ano_1, dia_2, mes_2, ano_2);
 
-                        for (int i = mes_2; i < mes_1 - 1; i++) {
-                            sum_dias += meses[i];
-                        }
+                System.out.println(ConsoleColors.success("La distancia es: " + result_distance + " dias."));
 
-                        int result = ((meses[mes_2 - 1] - dia_2) + dia_1);
-
-                        sum_dias += result;
-
-                        System.out.println(
-                                ConsoleColors.success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
-                    }
-
-                    if (dia_1 - dia_2 != 0 & mes_1 - mes_2 != 0) {
-                        System.out.println("Ano igual, meses e dias diferentes.\n");
-
-                        for (int i = mes_2; i < mes_1 - 1; i++) {
-                            sum_dias += meses[i];
-                        }
-
-                        int result = ((meses[mes_2 - 1] - dia_2) + dia_1);
-
-                        sum_dias += result;
-
-                        System.out.println(
-                                ConsoleColors.success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
-
-                    }
-                } else if (ano_1 - ano_2 == 1) {
-
-                    if (dia_1 - dia_2 == 0 & mes_1 - mes_2 == 0) {
-                        sum_dias += year_amount;
-                        System.out.println(
-                                ConsoleColors.success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
-                    } else {
-                        if (mes_1 == 1 & mes_2 == 12) {
-                            sum_dias += ((meses[mes_2 - 1] - dia_2) + dia_1);
-
-                            System.out.println(ConsoleColors
-                                    .success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
-                        } else {
-                            sum_dias += (meses[mes_2 - 1] - dia_2) + dia_1;
-
-                            for (int i = mes_2; i < meses.length; i++) {
-                                sum_dias += meses[i];
-                            }
-
-                            for (int i = 0; i < mes_1 - 1; i++) {
-                                sum_dias += meses[i];
-                            }
-
-                            System.out.println(ConsoleColors
-                                    .success("La distancia entre las fechas es: " + sum_dias + " dias.\n"));
-
-                        }
-
-                    }
-
-                } else if (ano_1 - ano_2 > 1) {
-                    // sum_dias += (((ano_1 - ano_2) - 1) * year_amount);
-
-                    for (int i = 0; i < ((ano_1 - ano_2) - 1); i++) {
-                        sum_dias += year_amount;
-                        System.out.println(i + ". " + sum_dias + " The number divided is: "
-                                + (sum_dias / year_amount) + "\n");
-
-                    }
-
-                    System.out.println(
-                            "Quantidade de anos: " + ((ano_1 - ano_2) - 1) + " / Quantidade de dias: " + sum_dias
-                                    + "\n");
-
-                    if (dia_1 - dia_2 == 0 & mes_1 - mes_2 == 0) {
-                    } else {
-                    }
-
-                    System.out.println(
-                            ConsoleColors.success("How many days should I sum? " + (((ano_1 - ano_2) - 1) * 365))
-                                    + "\n");
-
-                }
+                System.out.println("-----------");
 
             } else if (fecha_distante == 2) {
-                System.out.println(ConsoleColors.success("La fecha 2 es la mas distante! \n"));
-                if (ano_2 - ano_1 == 0) {
-                    if (mes_2 - mes_1 == 0) {
-                    }
-                    if (dia_2 - dia_1 == 0) {
-                    }
-                } else if (ano_2 - ano_1 == 1) {
 
-                } else if (ano_2 - ano_1 > 1) {
-                }
+                System.out.println(ConsoleColors.success("La fecha 2 es la mas distante!"));
+
+                System.out.println("-----------");
+
+                int result_distance = calculateDateDistance(dia_2, mes_2, ano_2, dia_1, mes_1, ano_1);
+
+                System.out.println(ConsoleColors.success("La distancia es: " + result_distance + " dias."));
+
+                System.out.println("-----------");
+
             } else if (fecha_distante == 3) {
-                System.out.println(ConsoleColors.success("Las fechas son iguales! \n"));
+
+                System.out.println(ConsoleColors.success("Las fechas son iguales!"));
+
+                System.out.println("-----------");
+
             } else if (fecha_distante == 0) {
-                System.out.println(ConsoleColors.error("Something wrong with the code! \n"));
+
+                System.out.println(ConsoleColors.error("Something wrong with the code!"));
+
+                System.out.println("-----------");
+
             }
 
         } else {
-            System.out.println(ConsoleColors.error("Incorrect values, please, try again! \n"));
+
+            System.out.println(ConsoleColors.error("Incorrect values, please, try again!"));
+
+            System.out.println("-----------");
+
         }
     };
 
-    public static String validateDate(int dia, int mes, int ano, String error) {
+    public static boolean validateDate(int dia, int mes, int ano) {
+
+        boolean isValid = true;
 
         switch (mes) {
             case 1, 3, 5, 7, 8, 10, 12:
-                if (dia < 1 | dia > 31)
-                    error += "d";
+                if (dia < 1 || dia > 31)
+                    isValid = false;
                 break;
             case 2:
-                if (dia < 1 | dia > 28)
-                    error += "d";
+                if (dia < 1 || dia > 28)
+                    isValid = false;
                 break;
             default:
-                if (dia < 1 | dia > 30)
-                    error += "d";
+                if (dia < 1 || dia > 30)
+                    isValid = false;
                 break;
         }
 
-        if (mes < 1 | mes > 12) {
-            error += "m";
+        if (mes < 1 || mes > 12) {
+            isValid = false;
         }
 
         if (ano < 1) {
-            error += "y";
+            isValid = false;
         }
 
-        return error;
+        return isValid;
     };
 
     public static int whichIsMoreDistant(int dia_1, int mes_1, int ano_1, int dia_2, int mes_2, int ano_2) {
@@ -241,4 +156,82 @@ public class Main {
 
         return fecha_distante;
     };
+
+    public static int calculateDateDistance(int dia_1st, int mes_1st, int ano_1st, int dia_2nd, int mes_2nd,
+            int ano_2nd) {
+
+        int[] meses = { 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 }; // position: 0 1 2 3 4 5 6 7 8 9 10 11
+
+        int year_amount = 0;
+
+        int sum_dias = 0;
+
+        for (int i = 0; i < meses.length; i++) {
+            year_amount += meses[i];
+        }
+        ;
+
+        if (ano_1st - ano_2nd == 0) { // PRIMERA OPCION: ANOS IGUALES
+
+            if (dia_1st - dia_2nd != 0 && mes_1st - mes_2nd == 0) {
+                sum_dias += (dia_1st - dia_2nd);
+            } else {
+                for (int i = mes_2nd; i < mes_1st - 1; i++) {
+                    sum_dias += meses[i];
+                }
+
+                int result = ((meses[mes_2nd - 1] - dia_2nd) + dia_1st);
+
+                sum_dias += result;
+            }
+
+        } else if (ano_1st - ano_2nd == 1) { // SEGUNDA OPCION: ANO DE DIFERENCIA ES 1
+
+            if (dia_1st - dia_2nd == 0 && mes_1st - mes_2nd == 0) {
+
+                sum_dias += year_amount;
+
+            } else {
+                if (mes_1st == 1 && mes_2nd == 12) {
+
+                    sum_dias += ((meses[mes_2nd - 1] - dia_2nd) + dia_1st);
+
+                } else {
+                    sum_dias += (meses[mes_2nd - 1] - dia_2nd) + dia_1st;
+
+                    for (int i = mes_2nd; i < meses.length; i++) {
+                        sum_dias += meses[i];
+                    }
+
+                    for (int i = 0; i < mes_1st - 1; i++) {
+                        sum_dias += meses[i];
+                    }
+                }
+
+            }
+
+        } else if (ano_1st - ano_2nd > 1) { // TERCERA OPCION: ANOS DE DIFERENCIA MAYOR A 1
+
+            if (dia_1st - dia_2nd == 0 && mes_1st - mes_2nd == 0) {
+
+                sum_dias += ((ano_1st - ano_2nd) * year_amount);
+
+            } else {
+                sum_dias += (((ano_1st - ano_2nd) - 1) * year_amount); // qtde de anos completos entre las fechas
+
+                sum_dias += (meses[mes_2nd - 1] - dia_2nd) + dia_1st;
+
+                for (int i = mes_2nd; i < meses.length; i++) {
+                    sum_dias += meses[i];
+                }
+
+                for (int i = 0; i < mes_1st - 1; i++) {
+                    sum_dias += meses[i];
+                }
+            }
+
+        }
+
+        return sum_dias;
+    }
 };
