@@ -15,18 +15,18 @@ public class Main {
 
         int unidade;
 
-        String[] string_decimal = { "Veinte", "Treinta", "Cuarenta", "Cincuenta", "Sesenta", "Setenta", "Ochenta",
-                "Noventa" };
+        String[] string_decimal = { "veinte", "treinta", "cuarenta", "cincuenta", "sesenta", "setenta", "ochenta",
+                "noventa" };
 
         String[] string_unidade = { "cero", "uno", "dos", "tres", "cuatro", "cinco", "seis", "siete", "ocho", "nueve" };
 
         String numero_string = "";
 
-        System.out.println("Please, type a numero between 0 and 99: \n");
+        System.out.println("Please, type a number between 0 and 99: \n");
         numero = Entrada.entero();
 
         if (numero >= 0 && numero < 100) {
-            System.out.println(ConsoleColors.success("The numero is in range."));
+            System.out.println(ConsoleColors.success("The number is in range."));
 
             decimal = (numero - (numero % 10)) / 10;
 
@@ -94,7 +94,34 @@ public class Main {
                 }
                 ;
             } else {
-                System.out.println("Numero < 20");
+                if (numero < 10) {
+                    System.out.println(string_unidade[numero]);
+                } else {
+                    switch (numero) {
+                        case 10:
+                            System.out.println(ConsoleColors.success("diez"));
+                            break;
+                        case 11:
+                            System.out.println(ConsoleColors.success("once"));
+                            break;
+                        case 12:
+                            System.out.println(ConsoleColors.success("doce"));
+                            break;
+                        case 13:
+                            System.out.println(ConsoleColors.success("trece"));
+                            break;
+                        case 14:
+                            System.out.println(ConsoleColors.success("catorce"));
+                            break;
+                        case 15:
+                            System.out.println(ConsoleColors.success("quince"));
+                            break;
+                        default:
+                            System.out.println(ConsoleColors.success("dieci" + string_unidade[numero % 10]));
+                    }
+                }
+                ;
+
             }
 
             System.out.println(numero_string);
