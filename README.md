@@ -15,7 +15,7 @@ El objetivo de este repositorio es reunir y organizar los ejercicios resueltos d
 
 Los ejercicios abarcan los temas:
 
-- Boletín 1 (Variables y condicionales)
+- Boletín 1 (Variables y condicionales) ✅
 - Boletín 2 (Condicionales y bucles)
 - Boletín 3 (Bucles anidados)
 - Boletín 4 (Tablas)
