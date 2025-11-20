@@ -5,7 +5,7 @@ import util.Entrada;
 public class Main {
     public static void main(String[] args) {
         System.out.println(
-                "\nLeer un número y mostrar su cuadrado, repetir el proceso hasta que se introduzca un número negativo. \n");
+                "\n1. Leer un número y mostrar su cuadrado, repetir el proceso hasta que se introduzca un número negativo. \n");
 
         int number;
 
