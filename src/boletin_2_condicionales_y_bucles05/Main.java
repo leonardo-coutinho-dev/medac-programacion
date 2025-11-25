@@ -19,11 +19,11 @@ public class Main {
 
             if (number < N) {
                 System.out.println(ConsoleColors.error("\nThe number you typed is lower, try higher! (+) \n"));
-                number = Entrada.entero();
             } else {
                 System.out.println(ConsoleColors.error("\nThe number you typed is higher, try lower! (-) \n"));
-                number = Entrada.entero();
             }
+
+            number = Entrada.entero();
 
         }
 
