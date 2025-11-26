@@ -18,9 +18,9 @@ public class Main {
         while (number != N) {
 
             if (number < N) {
-                System.out.println(ConsoleColors.error("\nThe number you typed is lower, try higher! (+) \n"));
+                System.out.println(ConsoleColors.warning("\nThe number you typed is lower, try higher! (+) \n"));
             } else {
-                System.out.println(ConsoleColors.error("\nThe number you typed is higher, try lower! (-) \n"));
+                System.out.println(ConsoleColors.warning("\nThe number you typed is higher, try lower! (-) \n"));
             }
 
             number = Entrada.entero();

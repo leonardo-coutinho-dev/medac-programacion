@@ -6,6 +6,7 @@ public class ConsoleColors {
     public static final String BLACK_BG = "\u001B[40m";
     public static final String BRIGHT_GREEN = "\u001B[92m";
     public static final String BRIGHT_RED = "\u001B[91m";
+    public static final String BRIGHT_YELLOW = "\u001B[93m";
 
     // Convenience shortcut for your specific style
     public static String success(String text) {
@@ -14,5 +15,9 @@ public class ConsoleColors {
 
     public static String error(String text) {
         return BOLD + BLACK_BG + BRIGHT_RED + text + RESET;
+    };
+
+    public static String warning(String text) {
+        return BOLD + BLACK_BG + BRIGHT_YELLOW + text + RESET;
     };
 };
