@@ -5,7 +5,7 @@ import util.*;
 public class Main {
     public static void main() {
         System.out.println(
-                "\n6. Pedir números hasta que se teclee un 0, mostrar la suma de todos los números introducidos.\n");
+                "\n6. Pedir números hasta que se tecle un 0, mostrar la suma de todos los números introducidos.\n");
 
         int number, sum = 0;
 
