@@ -19,6 +19,6 @@ public class Main {
             System.out.println(c + "\n");
         }
 
-        // cleaner code with for
+        // cleaner code with for - do not have to declare a variable outside the loop
     }
 }
