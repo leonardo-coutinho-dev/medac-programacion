@@ -10,6 +10,8 @@ public class Main {
 
         int number, factorial = 1;
 
+        String operation = "";
+
         ArrayList<Integer> numbers = new ArrayList<>();
 
         System.out.println("Type a number: \n");
@@ -19,11 +21,23 @@ public class Main {
 
         for (int i = number; i > 0; i--) {
             factorial *= i;
+
+            if (i == 1) {
+                operation += i;
+            } else {
+                operation += i + "x";
+            }
+
             numbers.add(i);
         }
 
-        System.out.println(factorial);
-        System.out.println("\n" + numbers + "\n");
+        // System.out.println(factorial);
+
+        // System.out.println("\n" + operation + "\n");
+
+        // System.out.println(numbers + "\n");
+
+        System.out.println(operation + " = " + factorial + "\n");
 
     }
 }
