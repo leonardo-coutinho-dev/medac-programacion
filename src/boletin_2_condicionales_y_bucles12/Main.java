@@ -1,5 +1,7 @@
 package boletin_2_condicionales_y_bucles12;
 
+import java.util.ArrayList;
+
 import util.*;
 
 public class Main {
@@ -8,16 +10,20 @@ public class Main {
 
         int number, factorial = 1;
 
-        System.out.println("Type a number: ");
+        ArrayList<Integer> numbers = new ArrayList<>();
+
+        System.out.println("Type a number: \n");
         number = Entrada.entero();
 
-        System.out.println("This is the number you entered: " + number);
+        System.out.println("\nThis is the number you entered: " + number + "\n");
 
         for (int i = number; i > 0; i--) {
             factorial *= i;
+            numbers.add(i);
         }
 
         System.out.println(factorial);
+        System.out.println("\n" + numbers + "\n");
 
     }
 }
