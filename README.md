@@ -39,7 +39,9 @@ Los ejercicios abarcan los temas:
 
 Cada carpeta contiene varios archivos `.java`, y cada uno incluye un método `main` para ejecutarlo de manera independiente.
 
-### Ejercícios
+---
+
+## Ejercícios
 
 ### **Boletín 1 – Variables y condicionales**
 
@@ -65,6 +67,32 @@ Cada carpeta contiene varios archivos `.java`, y cada uno incluye un método `ma
 20. Pedir una hora (hora, minutos y segundos) y mostrar la hora en el segundo siguiente.
 21. Pedir una nota numérica entera entre 0 y 10 y mostrarla escrita (cero, uno, dos, etc.).
 22. Pedir un número de 0 a 99 y mostrarlo escrito con palabras (por ejemplo, 56 → “cincuenta y seis”).
+
+### **Boletín 2 – Condicionales y bucles**
+
+1. Leer un número y mostrar su cuadrado; repetir el proceso hasta que se introduzca un número negativo.
+2. Leer un número e indicar si es positivo o negativo. El proceso se repetirá hasta que se introduzca un 0.
+3. Leer números hasta que se introduzca un 0. Para cada uno indicar si es par o impar.
+4. Pedir números hasta que se teclee uno negativo y mostrar cuántos números se han introducido.
+5. Realizar un juego para adivinar un número. Pedir un número N y luego ir pidiendo números indicando “mayor” o “menor” según corresponda. El proceso termina cuando el usuario acierta.
+6. Pedir números hasta que se teclee un 0 y mostrar la suma de todos los números introducidos.
+7. Pedir números hasta que se introduzca uno negativo y calcular la media.
+8. Pedir un número N y mostrar todos los números del 1 al N.
+9. Escribir todos los números del 100 al 0 de 7 en 7.
+10. Pedir 15 números y escribir la suma total.
+11. Diseñar un programa que muestre el producto de los 10 primeros números impares.
+12. Pedir un número y calcular su factorial.
+13. Pedir 10 números y mostrar la media de los números positivos, la media de los números negativos y la cantidad de ceros.
+14. Pedir 10 sueldos y mostrar su suma y cuántos hay mayores de 1000 €.
+15. Dadas las edades y alturas de 5 alumnos, mostrar la edad media, la estatura media, la cantidad de alumnos mayores de 18 años y la cantidad de alumnos que miden más de 1,75 m.
+16. Pedir un número entre 0 y 10 y mostrar la tabla de multiplicar de dicho número.
+17. Una empresa que se dedica a la venta de desinfectantes necesita un programa para gestionar facturas. De 5 facturas introducidas se pide: facturación total, litros vendidos del artículo 1 y cuántas facturas superan los 600 €.
+18. Igual que el ejercicio anterior, pero sin introducir el precio por litro. Solo existen tres productos con precios fijos.
+19. Dadas 6 notas, escribir la cantidad de alumnos aprobados, condicionados (nota = 4) y suspensos.
+20. Pedir un número N, introducir N sueldos y mostrar el sueldo máximo.
+21. Pedir 10 números y mostrar al final si se ha introducido alguno negativo.
+22. Pedir 5 calificaciones de alumnos y decir al final si hay algún suspenso.
+23. Pedir 5 números e indicar si alguno es múltiplo de 3.
 
 ---
 
