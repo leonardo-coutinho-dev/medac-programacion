@@ -94,6 +94,28 @@ Cada carpeta contiene varios archivos `.java`, y cada uno incluye un método `ma
 22. Pedir 5 calificaciones de alumnos y decir al final si hay algún suspenso.
 23. Pedir 5 números e indicar si alguno es múltiplo de 3.
 
+### **Boletín 3 – Bucles anidados**
+
+1. Realiza detenidamente una traza del siguiente programa y muestra cuál sería la salida por pantalla.
+2. Realiza una traza del siguiente algoritmo y muestra la salida generada por pantalla.
+3. Diseña una aplicación que muestre las tablas de multiplicar del 1 al 10.
+4. Dibuja un cuadrado de *n* elementos de lado utilizando asteriscos (*).
+5. Mostrar un contador con 5 dígitos (X-X-X-X-X) que vaya desde 0-0-0-0-0 hasta 9-9-9-9-9, sustituyendo cada vez que aparezca un 3 por la letra **E**.
+6. Realizar un programa que pida un número *n* y diga cuántos números hay entre 1 y *n* que son primos.
+
+### **Boletín 4 – Tablas**
+
+1. Leer 5 números y mostrarlos en el mismo orden introducido.
+2. Leer 5 números y mostrarlos en orden inverso al introducido.
+3. Leer 5 números por teclado y realizar la media de los números positivos, la media de los negativos y contar el número de ceros.
+4. Leer 10 números enteros y mostrarlos en el siguiente orden: el primero, el último, el segundo, el penúltimo, el tercero, etc.
+5. Leer por teclado dos tablas de 10 números enteros y mezclarlas en una tercera de la forma: el primero de A, el primero de B, el segundo de A, el segundo de B, etc.
+6. Leer los datos correspondientes a dos tablas de 12 elementos numéricos y mezclarlos en una tercera de la forma: 3 de la tabla A, 3 de la tabla B, otros 3 de A, otros 3 de B, etc.
+7. Leer una tabla de 10 números enteros y desplazarla una posición hacia la derecha (el último pasa a ser el primero).
+8. Leer una tabla de 10 números enteros y desplazarla *n* posiciones hacia la derecha.
+9. Leer una tabla de 10 números enteros y ordenarla de forma creciente.
+10. Leer dos tablas de 10 números enteros ya ordenadas de forma creciente y mezclarlas en una tercera, manteniendo el orden.
+
 ---
 
 ## 🖥️ Cómo usar este repositorio
